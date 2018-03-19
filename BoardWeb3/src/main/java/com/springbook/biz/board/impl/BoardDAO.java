@@ -15,7 +15,7 @@ import com.springbook.biz.board.BoardService;
 import com.springbook.biz.board.BoardVO;
 import com.springbook.biz.common.JDBCUtil;
 
-@Repository
+
 public class BoardDAO  {
 	private Connection conn = null;
 	private PreparedStatement stmt = null;
@@ -28,6 +28,9 @@ public class BoardDAO  {
 	private final String BOARD_GET 	  = "select * from board where seq=?";
 	private final String BOARD_LIST   = "select * from board order by seq desc";
 
+	public BoardDAO() {
+		System.out.println("BoardDAO 생성됨");
+	}
 	public void insertBoard(BoardVO vo) {
 		System.out.println("===> JDBC 로 InsertBoard() 기능 처리");
 		try {

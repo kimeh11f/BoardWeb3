@@ -4,18 +4,20 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import org.springframework.stereotype.Repository;
-
 import com.springbook.biz.common.JDBCUtil;
 import com.springbook.biz.user.UserVO;
 
-@Repository("userDAO")
+
 public class UserDAO {
 	private Connection conn = null;
 	private PreparedStatement stmt = null;
 	private ResultSet rs = null;
 
 	private final String USER_GET 	  = "select * from users where id=? and password = ?";
+	
+	public UserDAO() {
+		System.out.println("UserDAO 생성됨");
+	}
 	
 	public UserVO getUser(UserVO vo) {
 		System.out.println("===> JDBC로  getUser() 기능 처리");

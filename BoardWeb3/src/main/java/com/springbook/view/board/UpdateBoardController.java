@@ -13,9 +13,9 @@ import com.springbook.biz.board.impl.BoardDAO;
 public class UpdateBoardController {
 	public UpdateBoardController() {
 		System.out.println("UpdateBoardController-컨트롤러생성");
-	}
+	} 
 	@RequestMapping(value="/updateBoard.do")
-	public String updateBoard(@ModelAttribute("board2") BoardVO vo, BoardDAO boardDAO) {
+	public String updateBoard(@ModelAttribute("board") BoardVO vo, BoardDAO boardDAO) {
 		System.out.println("@RequestMapping /updateBoard.do");
 		System.out.println("번호 : " + vo.getSeq());
 		System.out.println("제목 : " + vo.getTitle());

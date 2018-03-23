@@ -38,7 +38,7 @@ public class GetBoardListController{
 	{
 		System.out.println("conditionMap");
 		Map<String, String> conditionMap = new HashMap<String, String>();
-		conditionMap.put("제목1", "TITLE");
+		conditionMap.put("제목", "TITLE");
 		conditionMap.put("내용", "CONTENT");
 		return conditionMap;
 	}

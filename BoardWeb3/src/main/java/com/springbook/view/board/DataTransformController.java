@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -18,6 +19,7 @@ public class DataTransformController {
 	
 	@RequestMapping("/dataTransform.do")
 	@ResponseBody
+	@CrossOrigin
 	public List<BoardVO> dataTransform(BoardVO vo){
 		vo.setSearchCondition("TITLE");
 		vo.setSearchKeyword("");
@@ -28,6 +30,7 @@ public class DataTransformController {
 	//xml로 다건
 /*	@RequestMapping("/dataTransform.do")
 	@ResponseBody
+	@CrossOrigin
 	public BoardListVO dataTransform(BoardVO vo){
 		vo.setSearchCondition("TITLE");
 		vo.setSearchKeyword("");
@@ -40,6 +43,7 @@ public class DataTransformController {
 	//xml로 단건
 /*	@RequestMapping("/dataTransform.do")
 	@ResponseBody
+	@CrossOrigin
 	public BoardVO dataTransform(BoardVO vo){
 		vo.setSeq(1);
 		BoardVO board = boardService.getBoard(vo);

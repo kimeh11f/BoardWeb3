@@ -13,8 +13,11 @@ public class BoardServiceImpl implements BoardService{
 /*	@Autowired
 	private BoardDAO boardDAO;*/
 
-	@Autowired
+/*	@Autowired
 	private BoardDAOSpring boardDAO;
+	*/
+	@Autowired
+	private BoardDAOMybatis boardDAO;
 	
 	@Override
 	public void insertBoard(BoardVO vo) {
